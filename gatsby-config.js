@@ -44,5 +44,74 @@ module.exports = {
         anonymize: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Red Hat Display`,
+            subsets: [`latin`],
+          },
+          {
+            family: `Red Hat Text`,
+            subsets: [`latin`],
+            variants: [`400`, `400i`, `700`, `900`],
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        whitelist: [`mode-dark`, `ol`, `ul`, `blockquote`],
+        purgeOnly: [`src/css/style.css`],
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: `static`,
+            },
+          },
+          `gatsby-remark-external-links`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700,
+              quality: 80,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: `assets`,
+            },
+          },
+          `gatsby-plugin-my-social-cards`,
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
+    },
   ],
 };
