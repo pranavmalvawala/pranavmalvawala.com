@@ -72,4 +72,5 @@ module.exports = {
     opacity: ["responsive", "group-hover", "hover", "focus"],
   },
   plugins: [require("tailwindcss-dark-mode")()],
+  purge: false,
 };
