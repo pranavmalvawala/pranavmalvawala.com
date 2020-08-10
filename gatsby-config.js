@@ -5,9 +5,13 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@taylorbryant`,
+    title: `Pranav Malvawala`,
+    description: `Personal Blog`,
+    author: `@pranavmalvawala`,
+    siteUrl: `https://pranavmalvawala2.netlify.app/`,
+    social: {
+      twitter: `@pranavmalvawala`,
+    },
   },
   plugins: [
     `gatsby-plugin-eslint`,

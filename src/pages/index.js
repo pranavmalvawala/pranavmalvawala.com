@@ -1,41 +1,32 @@
 import React from "react";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
+import { Layout, SEO, Section, Button } from "../components/common";
+import { Twitter } from "react-feather";
 
 function IndexPage() {
   return (
     <Layout>
-      <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="Home"
-      />
+      <SEO keywords={[]} title="Home" />
 
-      <section className="text-center">
-        <img
-          alt="Cat and human sitting on a couch"
-          className="block w-1/2 mx-auto mb-8"
-          src={catAndHumanIllustration}
-        />
-
-        <h2 className="inline-block p-3 mb-4 text-2xl font-bold bg-yellow-400">
-          Hey there! Welcome to your first Gatsby site.
-        </h2>
-
-        <p className="leading-loose">
-          This is a barebones starter for Gatsby styled using{` `}
-          <a
-            className="font-bold text-gray-900 no-underline"
-            href="https://tailwindcss.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tailwind CSS
-          </a>
-          , a utility-first CSS framework.
-        </p>
-      </section>
+      <Section>
+        <div className="mt-16">
+          <p className="text-neutral-500 dark:text-neutral-300 text-4xl">
+            Hello!{" "}
+            <span role="img" aria-label="hande">
+              👋
+            </span>
+          </p>
+          <h2 className="text-4xl md:text-6xl leading-tight font-bold dark:text-neutral-10 mb-8 border-b-0">
+            I’m Pranav and I build things for the web.
+          </h2>
+          <Button
+            text="Let's connect"
+            icon={<Twitter />}
+            to="https://twitter.com/pranavmalvawala"
+            extend="bg-primary-500"
+          />
+        </div>
+      </Section>
     </Layout>
   );
 }

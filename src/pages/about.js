@@ -1,36 +1,85 @@
 import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import dogIllustration from "../images/dog-illustration.svg";
+import { Layout, SEO, Section } from "../components/common";
+import Profile from "../../content/assets/profile.jpg";
 
 function AboutPage() {
   return (
     <Layout>
-      <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
-        title="About"
-      />
-
-      <section className="flex flex-col items-center md:flex-row">
-        <div className="md:w-2/3 md:mr-8">
-          <blockquote className="pl-4 font-serif leading-loose text-justify border-l-4 border-gray-900">
-            The point is... to live one&apos;s life in the full complexity of
-            what one is, which is something much darker, more contradictory,
-            more of a maelstrom of impulses and passions, of cruelty, ecstacy,
-            and madness, than is apparent to the civilized being who glides on
-            the surface and fits smoothly into the world.
-          </blockquote>
-
-          <cite className="block mt-4 text-xs font-bold text-right uppercase">
-            – Thomas Nagel
-          </cite>
+      <SEO title="About" />
+      <Section>
+        <h1>About Me</h1>
+        <div className="flex flex-wrap">
+          <p className="measure md:w-3/4 md:mr-8">
+            Hey, I&#39;m Pranav, a full stack software developer and I&#39; ve
+            recently decided to start writing about the things I know.
+            <br />
+            <br /> Why did I start tho? cause I read an article about{" "}
+            <a href="https://www.swyx.io/writing/learn-in-public/">
+              learning in public
+            </a>{" "}
+            and it really got me thinking, like huh? this could actually be fun
+            So I made this website where I <Link to="/blog">write</Link> about
+            coding and showcase some <Link to="/projects">projects</Link>.
+          </p>
+          <img
+            alt="profile"
+            className="h-full md:w-1/4 w-3/4 rounded-lg shadow mx-auto	"
+            src={Profile}
+          />
         </div>
-
-        <figure className="w-2/3 md:w-1/3">
-          <img alt="A dog relaxing" src={dogIllustration} />
-        </figure>
-      </section>
+      </Section>
+      <Section>
+        <h2>More to know...</h2>
+        <p>
+          A little about beginnings, I actually gratuated as an electrical
+          engineer but soon realized my passion for coding. At that time I didn
+          &#39;t actually know how to code but I found Tech and coding,
+          fascinating and cool. So I seriously thought of giving this side of me
+          a shot and here I am a self taught software developer. <br /> <br />{" "}
+          If you would like to read about this in some detail, I have written a
+          blog about it!!
+        </p>
+      </Section>
+      <Section>
+        <h2>Pranav:</h2>
+        <ul>
+          <li>
+            <span aria-label="pc" role="img">
+              💻
+            </span>{" "}
+            works full-time as a developer
+          </li>
+          <li>
+            <span aria-label="floppy" role="img">
+              💾
+            </span>{" "}
+            is available for freelance gigs
+          </li>
+          <li>
+            <span aria-label="movie camera" role="img">
+              🎥
+            </span>{" "}
+            loves to watch tv shows / movies
+          </li>
+          <li>
+            <span aria-label="hat" role="img">
+              🎓
+            </span>{" "}
+            is currently working on getting{" "}
+            <a href="https://www.freecodecamp.org/">freeCodeCamp</a>{" "}
+            certifications
+          </li>
+          <li>
+            <span aria-label="trophy" role="img">
+              🏆
+            </span>{" "}
+            recently started practicing in{" "}
+            <a href="https://www.codewars.com/">codewars</a>
+          </li>
+        </ul>
+      </Section>
     </Layout>
   );
 }
