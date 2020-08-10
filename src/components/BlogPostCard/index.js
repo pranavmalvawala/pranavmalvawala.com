@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
+import PropTypes from "prop-types";
 
-function BlogPostCard({ title, excerpt, timeToRead, slug, date, tags }) {
+function BlogPostCard({ title, excerpt, slug, tags }) {
   return (
     <Link className="w-full px-2 my-2 md:my-6 md:px-2 md:w-1/2 h-65" to={slug}>
       <div className="rounded overflow-hidden shadow-lg min-h-full dark:bg-neutral-700 bg-white">
@@ -30,5 +31,12 @@ function BlogPostCard({ title, excerpt, timeToRead, slug, date, tags }) {
     </Link>
   );
 }
+
+BlogPostCard.propTypes = {
+  title: PropTypes.string,
+  excerpt: PropTypes.string,
+  slug: PropTypes.string,
+  tags: PropTypes.array,
+};
 
 export default BlogPostCard;

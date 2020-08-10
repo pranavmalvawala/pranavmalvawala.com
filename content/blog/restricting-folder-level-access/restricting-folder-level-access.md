@@ -45,7 +45,7 @@ repo and make a commit. So now the parent must be looking like this:
 
 Now lets add child repo as a submodule to our parent repo. Type this cmd in parent's shell,
 
-```terminal
+```bash
 $ git submodule add <CHILD_REPO_GITHUB_URL> <PATH>
 ```
 
@@ -73,7 +73,7 @@ You can have as many submodules as you like and when you add a new module a new 
 
 Let us check changes now, so I do,
 
-```terminal
+```bash
 git status
 ```
 
@@ -106,7 +106,7 @@ is pull those changes in with `update` command.
 
 Execute this command in parent's shell:
 
-```terminal
+```bash
 $ git submodule update --remote
 ```
 
@@ -128,11 +128,11 @@ So all you have to do now is commit this change to parent repo .The `<hash>` poi
 If you already have a repo which has submodules in it and you are looking to clone it then,
 all you have to do is clone the repo and fetch submodule in it with this:
 
-```terminal
+```bash
 $ git clone <REPO_URL>
 ```
 
-```terminal
+```bash
 $ cd <REPO_FOLDER> && git submodule init && git submodule update
 ```
 

@@ -43,7 +43,7 @@ const ReadingProgress = ({ target }) => {
 };
 
 ReadingProgress.propTypes = {
-  target: PropTypes.elementType,
+  target: PropTypes.object,
 };
 
 export default ReadingProgress;

@@ -55,7 +55,7 @@ function Newsletter() {
           <div className="w-full px-2 my-4 md:my-2 md:w-1/4">
             <button
               type="submit"
-              className="inline-flex items-center justify-center w-full h-full px-6 py-3 text-xl font-bold text-white bg-white rounded-lg"
+              className="inline-flex items-center justify-center w-full h-full px-6 py-3 text-xl font-bold text-green-700 bg-white rounded-lg"
             >
               Subscribe
             </button>
