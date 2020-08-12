@@ -16,10 +16,6 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 
 - Daniel Wirtz - For his amazing [website](https://danielwirtz.com/) design which my site is based on
 
-## Author
-
-- [Pranav Malvawala](https://pranavmalvawala.netlify.app/)
-
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).

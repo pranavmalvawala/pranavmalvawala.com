@@ -2,7 +2,7 @@
   "name": "pranavmalvawala.com",
   "description": "Personal Blog",
   "version": "1.0.0",
-  "author": "Pranav Malvawala <pranavmalvawala@gmail.com>",
+  "author": "Pranav Malvawala <hey@pranavmalvawala.com>",
   "dependencies": {
     "autoprefixer": "^9.8.6",
     "framer-motion": "^2.3.0",
@@ -68,6 +68,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pranavmalvawala/gatsby-starter-tailwind"
+    "url": "https://github.com/pranavmalvawala/pranavmalvawala.com"
   }
 }

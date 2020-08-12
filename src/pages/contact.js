@@ -29,7 +29,7 @@ function ContactPage() {
         </div>
         <div className="py-4 flex border-t">
           <div className="w-32 sm:w-48">Email:</div>
-          <a href="mailto:pranavmalvawala@gmail.com">pranavmalvawala</a>
+          <a href="mailto:hey@pranavmalvawala.com">hey@pranavmalvawala.com</a>
         </div>
       </Section>
     </Layout>

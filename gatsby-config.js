@@ -8,7 +8,7 @@ module.exports = {
     title: `Pranav Malvawala`,
     description: `Personal Blog`,
     author: `@pranavmalvawala`,
-    siteUrl: `https://pranavmalvawala2.netlify.app/`,
+    siteUrl: `https://pranavmalvawala.com/`,
     social: {
       twitter: `@pranavmalvawala`,
     },
