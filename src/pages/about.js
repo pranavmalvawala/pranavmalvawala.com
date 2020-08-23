@@ -25,7 +25,7 @@ function AboutPage() {
           </p>
           <img
             alt="profile"
-            className="h-full md:w-1/4 w-3/4 rounded-lg shadow mx-auto	"
+            className="h-full md:w-1/4 w-1/4 rounded-lg shadow mx-auto	"
             src={Profile}
           />
         </div>

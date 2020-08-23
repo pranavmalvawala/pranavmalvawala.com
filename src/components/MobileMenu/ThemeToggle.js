@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Moon, Sun } from "react-feather";
 
 export default class ThemeToggle extends Component {
-  setTheme = theme => {
+  setTheme = (theme) => {
     const htmlSelector = document.querySelector("html");
 
     if (theme === "light") {
@@ -24,7 +24,7 @@ export default class ThemeToggle extends Component {
   };
 
   render = () => (
-    <div className="leading-0">
+    <div className="leading-0 self-center">
       <button
         className="focus:outline-none dark:hidden"
         title="Set dark theme"

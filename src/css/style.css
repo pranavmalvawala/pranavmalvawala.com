@@ -84,7 +84,7 @@ body {
 }
 
 p {
-  @apply mb-6 text-xl leading-snug tracking-p;
+  @apply mb-6 text-lg leading-7 tracking-p;
 }
 
 .link-underline {

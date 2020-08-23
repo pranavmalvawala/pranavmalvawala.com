@@ -25,7 +25,7 @@ function MenuItem({ to, title }) {
     <Link
       className="text-3xl px-4 py-2 mr-2 no-select"
       to={to}
-      activeClassName="font-semibold"
+      activeClassName="bg-neutral-200 dark:bg-neutral-800"
     >
       <motion.div variants={variants}>{title}</motion.div>
     </Link>
