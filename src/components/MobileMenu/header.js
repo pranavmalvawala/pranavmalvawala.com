@@ -1,10 +1,11 @@
 import { Link } from "gatsby";
 import React from "react";
-import { Section } from "../common";
 import ThemeToggle from "./ThemeToggle";
 import { useCycle, motion } from "framer-motion";
 import Navigation from "./Navigation";
 import MenuToggle from "./MenuToggle";
+import displayPicture from "../../../content/assets/photo.jpg";
+import { useLocation } from "@reach/router";
 
 function MDHeader() {
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -26,13 +27,27 @@ function MDHeader() {
       title: `Contact`,
     },
   ];
+  const path = useLocation();
+
   return (
-    <header className="">
-      <Section>
-        <div className="flex items-center justify-between pb-6 my-6 border-b-2 border-primary-400">
+    <header>
+      <section className="max-w-4xl mx-auto px-6 md:px-8">
+        <div className="flex items-center justify-between my-6 h-16">
           <nav>
-            <Link className="py-2 mr-2 text-2xl rounded font-semibold" to="/">
-              Pranav Malvawala
+            <Link
+              className="py-2 mr-2 text-2xl flex items-center"
+              aria-label="go to homepage"
+              to="/"
+            >
+              {path && path.pathname !== "/" ? (
+                <img
+                  src={displayPicture}
+                  alt="Pranav Malvawala"
+                  className="rounded-full w-12 h-12"
+                />
+              ) : null}
+
+              <span className="ml-2 font-medium">Pranav Malvawala</span>
             </Link>
           </nav>
           <motion.div
@@ -57,7 +72,7 @@ function MDHeader() {
             <ThemeToggle />
           </nav>
         </div>
-      </Section>
+      </section>
     </header>
   );
 }

@@ -59,7 +59,7 @@ module.exports = {
           {
             family: `Red Hat Text`,
             subsets: [`latin`],
-            variants: [`400`, `400i`, `700`, `900`],
+            variants: [`400`, `400i`, `500`, `700`, `900`],
           },
         ],
       },
