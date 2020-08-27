@@ -10,7 +10,7 @@ function ProjectCard({ title, source, url, description, buildUsing }) {
         style={{
           backgroundImage: `url("${siteImage}")`,
         }}
-        title="Woman holding a mug"
+        title="project's look"
       ></div>
       <div className="dark:bg-neutral-700 lg:h-64 md:h-64 border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal w-full">
         <div className="px-4 pt-2 h-32">

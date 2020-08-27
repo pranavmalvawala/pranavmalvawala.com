@@ -10,7 +10,7 @@ function ProjectsPage() {
       <Section>
         <h1>What have I build</h1>
         <p className="measure">
-          Here are a few that projects that I&#39;ve worked on recently. You can
+          Here are few projects that I&#39;ve worked on recently. You can
           find more of my work on{" "}
           <a href="https://github.com/pranavmalvawala">GitHub</a>.
         </p>

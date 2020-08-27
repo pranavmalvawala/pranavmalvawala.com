@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 
 import { Layout, SEO, Section } from "../components/common";
-import Profile from "../../content/assets/profile.jpg";
 
 function AboutPage() {
   return (
@@ -10,8 +9,8 @@ function AboutPage() {
       <SEO title="About" />
       <Section>
         <h1>About Me</h1>
-        <div className="flex flex-wrap">
-          <p className="measure md:w-3/4 md:mr-8">
+        <div>
+          <p>
             Hey, I&#39;m Pranav, a full stack software developer and I&#39; ve
             recently decided to start writing about the things I know.
             <br />
@@ -22,12 +21,7 @@ function AboutPage() {
             and it really got me thinking, like huh? this could actually be fun
             So I made this website where I <Link to="/blog">write</Link> about
             coding and showcase some <Link to="/projects">projects</Link>.
-          </p>
-          <img
-            alt="profile"
-            className="h-full md:w-1/4 w-1/4 rounded-lg shadow mx-auto	"
-            src={Profile}
-          />
+          </p>         
         </div>
       </Section>
       <Section>
