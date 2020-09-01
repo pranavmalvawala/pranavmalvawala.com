@@ -52,6 +52,8 @@ Blog.propTypes = {
   data: PropTypes.object,
 };
 
+export default Blog;
+
 export const pageQuery = graphql`
   query {
     site {
@@ -77,5 +79,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-export default Blog;

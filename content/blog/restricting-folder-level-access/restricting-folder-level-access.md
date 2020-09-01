@@ -7,6 +7,7 @@ categories:
 tags:
   - git
   - tools
+description: "Privatize your folder."
 ---
 
 My first encounter with restricting a folder on github is when I tried to clone [Tania Rascia's](https://www.taniarascia.com/) website. Her website is amazing, filled with lots of articles and I being a curious one, wanted to take a look under the hood and after cloning the code I realized that somehow the files inside the content folder isn't downloaded.
