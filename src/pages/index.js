@@ -31,7 +31,7 @@ function IndexPage({ data }) {
           />
         </div>
       </Section>
-      <section className="mt-10">
+      <section className="mt-24">
         <div className="max-w-3xl p-5 md:px-20 md:py-10 mx-auto rounded-md bg-white dark:bg-neutral-700">
           <h2 className="border-b-0">Blog</h2>
           {edges.map((edge) => (

@@ -31,7 +31,7 @@ function MDHeader() {
 
   return (
     <header>
-      <section className="max-w-4xl mx-auto px-6 md:px-8">
+      <section className="max-w-3xl mx-auto px-6 md:px-8">
         <div className="flex items-center justify-between my-6 h-16">
           <nav>
             <Link
