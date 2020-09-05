@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { Layout, SEO, Section, Button } from "../components/common";
 import { Twitter } from "react-feather";
 import BlogPostOnIndex from "../components/BlogPostOnIndex";
@@ -37,6 +37,7 @@ function IndexPage({ data }) {
           {edges.map((edge) => (
             <BlogPostOnIndex key={edge.node.frontmatter.title} edge={edge} />
           ))}
+          <Link to="/blog" className="text-lg">View all articles</Link>
         </div>
       </section>
     </Layout>
@@ -51,7 +52,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 5) {
       edges {
         node {
           fields {
