@@ -3,6 +3,7 @@ import React from "react";
 
 import Header from "../MobileMenu/header";
 import MDHeader from "../MobileMenu";
+import { Footer } from "./index";
 
 function Layout({ children }) {
   return (
@@ -13,6 +14,7 @@ function Layout({ children }) {
         {children}
       </main>
       <MDHeader />
+      <Footer />
     </div>
   );
 }
