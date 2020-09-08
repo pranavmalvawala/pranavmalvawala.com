@@ -58,7 +58,7 @@
 }
 
 .markdown h1 {
-  @apply inline-block pb-2 mt-6 mb-6 text-5xl font-semibold leading-tight border-b;
+  @apply pb-2 mt-0 mb-2 text-4xl font-medium text-center leading-tight border-b-0;
 }
 
 .markdown h2 {
