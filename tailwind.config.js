@@ -49,6 +49,10 @@ module.exports = {
         },
       },
     },
+    backgroundColor: (theme) => ({
+      ...theme("colors"),
+      light: "#fafafa",
+    }),
   },
   variants: {
     backgroundColor: [

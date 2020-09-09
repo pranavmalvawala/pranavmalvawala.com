@@ -7,7 +7,7 @@ import { Footer } from "./index";
 
 function Layout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen antialiased font-body text-neutral-700 dark:text-neutral-100 bg-neutral-50 dark:bg-neutral-900 dark-transition">
+    <div className="flex flex-col min-h-screen antialiased font-body text-neutral-700 dark:text-neutral-100 bg-light dark:bg-neutral-900 dark-transition">
       <Header />
 
       <main className="flex flex-col flex-1 w-full mx-auto mb-20">
