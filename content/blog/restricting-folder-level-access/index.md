@@ -1,13 +1,15 @@
 ---
 date: 2020-07-22
 title: "Restricting Folder Level Access in Repo using Git submodules"
+description: "Privatize your folder."
+banner: ./images/banner.jpg
+bannerCredit: "Photo by [Chris Leipelt](https://unsplash.com/@cleipelt)"
 template: post
 categories:
   - Code
 tags:
   - git
   - tools
-description: "Privatize your folder."
 ---
 
 My first encounter with restricting a folder on github is when I tried to clone [Tania Rascia's](https://www.taniarascia.com/) website. Her website is amazing, filled with lots of articles and I being a curious one, wanted to take a look under the hood and after cloning the code I realized that somehow the files inside the content folder isn't downloaded.
@@ -30,7 +32,7 @@ From here on out I'll be calling main repository as a **parent** repo and the fi
 
 Now consider you have a repo like this:
 
-![alt text](./git-submodule-init-repo.jpg "initial project structure")
+![alt text](./images/git-submodule-init-repo.jpg "initial project structure")
 
 And you want to restrict **content** folder for some reason while keeping the repo functional.
 
@@ -42,7 +44,7 @@ Now I want to see a 404 error when someone tries to access content folder so kee
 Once you move all files of <i>content</i> folder, delete the folder from the parent
 repo and make a commit. So now the parent must be looking like this:
 
-![alt text](./deleted-content.jpg "after deleting content")
+![alt text](./images/deleted-content.jpg "after deleting content")
 
 Now lets add child repo as a submodule to our parent repo. Type this cmd in parent's shell,
 
@@ -92,7 +94,7 @@ Changes to be committed:
 
 Now lets commit this changes and push to github. The repo must be looking like this now,
 
-![alt text](./repo-with-submodule.jpg "initial repo")
+![alt text](./images/repo-with-submodule.jpg "initial repo")
 
 We have successfully added _content_ folder as a submodule to the project.
 You can tell that it is a submodule as it has `@ <hash>` besides the name.

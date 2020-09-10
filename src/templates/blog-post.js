@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import PropTypes from "prop-types";
+import Img from "gatsby-image";
+import Markdown from "react-markdown";
 import "../css/prism-theme.css";
 import "../css/markdown.css";
 
@@ -20,6 +22,7 @@ class BlogPostTemplate extends React.Component {
 
     const target = React.createRef();
 
+    let ImgFluid = post.frontmatter.banner.childImageSharp.fluid;
     return (
       <>
         <Layout>
@@ -33,13 +36,16 @@ class BlogPostTemplate extends React.Component {
             <div className="max-w-3xl mx-auto px-6 md:px-8">
               <article className="mb-10 markdown" ref={target}>
                 <h1 className="text-5xl">{post.frontmatter.title}</h1>
-                <div>
-                  <img
-                    className="w-full h-full"
-                    src="https://ik.imagekit.io/q5edmtudmz/post1_fOFO9VDzENE.jpg"
-                    alt="Sunset in the mountains"
-                  />
-                </div>
+                {post.frontmatter.banner && (
+                  <div>
+                    <Img fluid={ImgFluid} alt={post.frontmatter.title} />
+                    {post.frontmatter.bannerCredit ? (
+                      <Markdown className="text-center">
+                        {post.frontmatter.bannerCredit}
+                      </Markdown>
+                    ) : null}
+                  </div>
+                )}
 
                 <section dangerouslySetInnerHTML={{ __html: post.html }} />
               </article>
@@ -95,6 +101,14 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        banner {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        bannerCredit
       }
       fields {
         slug

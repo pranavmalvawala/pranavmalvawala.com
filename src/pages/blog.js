@@ -29,7 +29,7 @@ function Blog({ data }) {
               const slug = node.fields.slug;
               const date = node.frontmatter.date;
               const tags = node.frontmatter.tags;
-
+              const ImgFluid = node.frontmatter.banner.childImageSharp.fluid;
               return (
                 <BlogPostCard
                   title={title}
@@ -39,6 +39,7 @@ function Blog({ data }) {
                   date={date}
                   tags={tags}
                   key={title}
+                  imgSrc={ImgFluid}
                 />
               );
             })}
@@ -72,6 +73,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             tags
+            banner {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           timeToRead
         }
