@@ -100,12 +100,12 @@
 
 .markdown ul,
 .markdown ol {
-  @apply py-4 pl-12 pr-6 my-6 list-disc bg-white rounded-lg shadow text-primary-900;
+  @apply pr-6 my-6 list-disc list-inside;
 }
 
 .mode-dark .markdown ul,
 .mode-dark .markdown ol {
-  @apply bg-neutral-800 text-primary-50;
+  @apply text-primary-50;
 }
 
 .markdown li {
@@ -131,4 +131,8 @@
 /* Override pygments style background color. */
 .markdown .highlight pre {
   @apply bg-neutral-100 !important;
+}
+
+.markdown .gatsby-highlight {
+  @apply -mx-6;
 }

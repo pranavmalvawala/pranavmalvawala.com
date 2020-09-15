@@ -52,6 +52,11 @@ module.exports = {
     backgroundColor: (theme) => ({
       ...theme("colors"),
       light: "#fafafa",
+      code: "#011627",
+    }),
+    textColor: (theme) => ({
+      ...theme("colors"),
+      "token-all": "#82aaff",
     }),
   },
   variants: {

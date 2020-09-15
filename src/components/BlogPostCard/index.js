@@ -35,7 +35,7 @@ BlogPostCard.propTypes = {
   excerpt: PropTypes.string,
   slug: PropTypes.string,
   tags: PropTypes.array,
-  imgSrc: PropTypes.string,
+  imgSrc: PropTypes.object,
 };
 
 export default BlogPostCard;

@@ -34,7 +34,7 @@ class BlogPostTemplate extends React.Component {
 
           <section>
             <div className="max-w-3xl mx-auto px-6 md:px-8">
-              <article className="mb-10 markdown" ref={target}>
+              <article className="mb-10 markdown pt-5" ref={target}>
                 <h1 className="text-5xl">{post.frontmatter.title}</h1>
                 {post.frontmatter.banner && (
                   <div>

@@ -49,7 +49,7 @@ repo and make a commit. So now the parent must be looking like this:
 Now lets add child repo as a submodule to our parent repo. Type this cmd in parent's shell,
 
 ```bash
-$ git submodule add <CHILD_REPO_GITHUB_URL> <PATH>
+git submodule add <CHILD_REPO_GITHUB_URL> <PATH>
 ```
 
 Here is what I would replace the variables with,  
@@ -110,7 +110,7 @@ is pull those changes in with `update` command.
 Execute this command in parent's shell:
 
 ```bash
-$ git submodule update --remote
+git submodule update --remote
 ```
 
 Since we are pulling changes from remote repo, hence the `--remote` flag.
@@ -132,11 +132,11 @@ If you already have a repo which has submodules in it and you are looking to clo
 all you have to do is clone the repo and fetch submodule in it with this:
 
 ```bash
-$ git clone <REPO_URL>
+git clone <REPO_URL>
 ```
 
 ```bash
-$ cd <REPO_FOLDER> && git submodule init && git submodule update
+cd <REPO_FOLDER> && git submodule init && git submodule update
 ```
 
 ## Deploying repository on netlify
