@@ -40,12 +40,16 @@ code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-  @apply rounded-lg p-6 my-4 overflow-auto shadow;
+  @apply rounded-md p-6 my-4 overflow-auto shadow;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-  @apply rounded-lg p-1;
+  @apply rounded-lg p-1 bg-inline-code text-inline-code-color;
+}
+
+.mode-dark :not(pre) > code[class*="language-"] {
+  @apply bg-dark-inline-code text-dark-inline-code-color;
 }
 
 .token.comment,

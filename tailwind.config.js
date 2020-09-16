@@ -53,11 +53,25 @@ module.exports = {
       ...theme("colors"),
       light: "#fafafa",
       code: "#011627",
+      "inline-code": "#f4f3fa",
+      "dark-inline-code": "#737c9933",
     }),
     textColor: (theme) => ({
       ...theme("colors"),
       "token-all": "#82aaff",
+      "inline-code-color": "#222426",
+      "dark-inline-code-color": "#e6e6e6",
     }),
+    borderWidth: {
+      default: "1px",
+      "0": "0",
+      "2": "2px",
+      "3": "3px",
+      "4": "4px",
+      "5": "5px",
+      "6": "6px",
+      "8": "8px",
+    },
   },
   variants: {
     backgroundColor: [

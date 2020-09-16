@@ -83,15 +83,15 @@
 }
 
 .markdown h6 {
-  @apply mt-6 mb-4 text-sm font-semibold leading-tight text-neutral-600;
+  @apply mt-6 mb-4 text-sm font-semibold leading-tight;
 }
 
 .markdown blockquote {
-  @apply px-4 py-4 my-8 bg-white border-l-2 rounded-lg shadow border-primary-700 text-primary-900;
+  @apply px-4 mb-6 border-l-5 border-primary-700 italic;
 }
 
 .mode-dark blockquote {
-  @apply border-l-2 bg-neutral-800 border-primary-400 text-primary-50;
+  @apply border-l-5 border-primary-400 text-primary-50;
 }
 
 .markdown blockquote p  {

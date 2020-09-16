@@ -24,7 +24,7 @@ Restricting some of the folders in your github repository isn't something **Gith
 
 But there is trick to it and our main ingredient is going to be **Git submodules**.
 
-_The basic idea here is, the folder that we want to restrict, is going to be converted into a whole new repository and then we are just going to be referencing that repo as a submodule to our main repository_
+> _The basic idea here is, the folder that we want to restrict, is going to be converted into a whole new >repository and then we are just going to be referencing that repo as a submodule to our main repository_
 
 From here on out I'll be calling main repository as a **parent** repo and the files that we decided to put in a different repo will be called as **child** repo.
 
@@ -133,9 +133,6 @@ all you have to do is clone the repo and fetch submodule in it with this:
 
 ```bash
 git clone <REPO_URL>
-```
-
-```bash
 cd <REPO_FOLDER> && git submodule init && git submodule update
 ```
 
@@ -156,7 +153,7 @@ The site will be successfully deployed.
 
 - Submodules allow you to keep a Git repository as a subdirectory of another Git repository.
 - You can add a submodule with this command
-  ```git
+  ```bash
   git submodule add <SUBMODULE_REPO_PATH>
   ```
 - Never work on a submodule from a parent repo. You should always just pull in changes to update it.
