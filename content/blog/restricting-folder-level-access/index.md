@@ -24,7 +24,7 @@ Restricting some of the folders in your github repository isn't something **Gith
 
 But there is trick to it and our main ingredient is going to be **Git submodules**.
 
-> _The basic idea here is, the folder that we want to restrict, is going to be converted into a whole new >repository and then we are just going to be referencing that repo as a submodule to our main repository_
+> _TL;DR: The folder that we want to restrict, is going to be converted into a whole new repository and then we are only going to be referencing that repo as a submodule to our main repository_
 
 From here on out I'll be calling main repository as a **parent** repo and the files that we decided to put in a different repo will be called as **child** repo.
 
@@ -56,17 +56,16 @@ Here is what I would replace the variables with,
 `CHILD_REPO_GITHUB_URL` - https://github.com/pranavmalvawala/pranavmalvawala.com-content.git  
 `PATH` - content/
 
-1. If you do not mention the path git by default will consider repo name as the folder name and just so like
-   me if you do not want that name just consider adding a path
+> _If you do not mention the path, Git by default will consider repo name as the folder name and just so like me if you do not want that name just consider adding a path._
 
-If the cmd was successfully executed two things would have happened:
+If the command was successfully executed two things would have happened:
 
-1. You'll see a new folder (content in my case) is created which holds all the data of child repo, and
-2. A .gitmodules file is created which contains all the references to submodules in your project,
+1. You'll see a that new folder (_content_ in my case) is created which holds all files of child repo
+2. A `.gitmodules` file is created which contains all the references to submodules in your project,
 
-My .gitmodules file would look like this:
+My `.gitmodules` file looks like this:
 
-```git
+```bash
 [submodule "content"]
 	path = content
 	url = https://github.com/pranavmalvawala/pranavmalvawala.com-content.git
@@ -82,7 +81,7 @@ git status
 
 The result may look something like this
 
-```git
+```bash
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -99,7 +98,7 @@ Now lets commit this changes and push to github. The repo must be looking like t
 We have successfully added _content_ folder as a submodule to the project.
 You can tell that it is a submodule as it has `@ <hash>` besides the name.
 
-1. The `<hash>` that we see here is the commit that we are pointing to, of child repo.
+> _The `<hash>` that we see here, is the commit that we are pointing to, of child repo._
 
 ## Updating a submodule
 
@@ -117,7 +116,7 @@ Since we are pulling changes from remote repo, hence the `--remote` flag.
 
 Now if the pull was sucessfully and you run `git status`, you will see something like this:
 
-```git
+```bash
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
@@ -152,9 +151,7 @@ The site will be successfully deployed.
 ## Summary
 
 - Submodules allow you to keep a Git repository as a subdirectory of another Git repository.
-- You can add a submodule with this command
-  ```bash
-  git submodule add <SUBMODULE_REPO_PATH>
-  ```
+- You can add a submodule with this command `git submodule add <SUBMODULE_REPO_PATH>`
+
 - Never work on a submodule from a parent repo. You should always just pull in changes to update it.
 - You can update submodule in a project with `git submodule update --remote`, where `--remote` flag implies fetch from remote url.
