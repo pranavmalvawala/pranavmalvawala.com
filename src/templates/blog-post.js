@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import Img from "gatsby-image";
 import Markdown from "react-markdown";
@@ -9,7 +9,7 @@ import "../css/markdown.css";
 import {
   Layout,
   Newsletter,
-  Divider,
+  // Divider,
   SEO,
   ReadingProgress,
 } from "../components/common";
@@ -17,12 +17,18 @@ import {
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
-
-    const { previous, next } = this.props.pageContext;
+    const GITHUB_USERNAME = "pranavmalvawala";
+    const GITHUB_REPO_NAME = "pranavmalvawala.com";
+    // const { previous, next } = this.props.pageContext;
 
     const target = React.createRef();
 
     let ImgFluid = post.frontmatter.banner.childImageSharp.fluid;
+    const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
+      `https://pranavmalvawala.com${post.fields.slug}`
+    )}`;
+
+    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/content/blog${post.fields.slug}index.md`;
     return (
       <>
         <Layout>
@@ -49,7 +55,16 @@ class BlogPostTemplate extends React.Component {
 
                 <section dangerouslySetInnerHTML={{ __html: post.html }} />
               </article>
-              <h2 className="border-b-0">Up next</h2>
+              <p>
+                <a href={discussUrl} target="_blank" rel="noreferrer noopener">
+                  Discuss on Twitter
+                </a>{" "}
+                •{" "}
+                <a href={editUrl} target="_blank" rel="noreferrer noopener">
+                  Edit on GitHub
+                </a>
+              </p>
+              {/* <h2 className="border-b-0">Up next</h2>
               <nav className="my-2 text-base md:text-xl opacity-5">
                 <ul className="flex justify-between">
                   <li>
@@ -67,10 +82,10 @@ class BlogPostTemplate extends React.Component {
                     )}
                   </li>
                 </ul>
-              </nav>
+              </nav> */}
             </div>
           </section>
-          <Divider />
+
           <Newsletter />
         </Layout>
         <ReadingProgress target={target} />
