@@ -109,7 +109,7 @@
 }
 
 .markdown li {
-  @apply pl-2 my-4 text-xl leading-snug;
+  @apply pl-2 my-3 text-lg leading-snug;
 }
 
 */ .markdown kbd {

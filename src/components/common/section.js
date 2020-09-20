@@ -2,7 +2,7 @@ import React from "react";
 import Container from "./container";
 import PropTypes from "prop-types";
 
-function Section({ children, extend }) {
+function Section({ children, extend = "" }) {
   return (
     <section className={`mt-10 ${extend}`}>
       <Container>{children}</Container>

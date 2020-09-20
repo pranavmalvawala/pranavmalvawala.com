@@ -180,5 +180,17 @@ ul li a:hover {
   @apply text-white;
 }
 
+.mode-dark .custom-shadow-dark {
+  box-shadow: 0 2px 15px 0 rgba(26, 26, 27, 0.637);
+}
+
+.custom-shadow {
+  box-shadow: 0 2px 15px 0 rgba(210, 214, 220, 0.5);
+}
+
+.radius-24 {
+  border-radius: 1.5rem;
+}
+
 @tailwind components;
 @tailwind utilities;

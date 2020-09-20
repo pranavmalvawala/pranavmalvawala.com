@@ -55,6 +55,8 @@ module.exports = {
       code: "#011627",
       "inline-code": "#f4f3fa",
       "dark-inline-code": "#737c9933",
+      reddish: "#d54474",
+      "light-2": "f9fafb",
     }),
     textColor: (theme) => ({
       ...theme("colors"),
@@ -93,6 +95,7 @@ module.exports = {
     ],
     display: ["responsive", "dark"],
     opacity: ["responsive", "group-hover", "hover", "focus"],
+    boxShadow: ["responsive", "hover", "focus", "dark"],
   },
   plugins: [require("tailwindcss-dark-mode")()],
   purge: false,
