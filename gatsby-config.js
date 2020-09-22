@@ -19,11 +19,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `pranavmalvawala`,
-        short_name: `pranavmalvawala`,
+        name: `Pranav Malvawala`,
+        short_name: `Pranav Malvawala`,
         start_url: `/`,
+        background_color: fullConfig.theme.colors.black,
         theme_color: fullConfig.theme.colors.teal["400"],
-        display: `standalone`,
+        display: `minimal-ui`,
         icon: `content/assets/favicon.png`,
       },
     },
