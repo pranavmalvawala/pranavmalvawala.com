@@ -183,3 +183,47 @@ pre > code.highlight {
     rgba(10, 163, 112, 0)
   );
 }
+
+pre.language-terminal {
+  box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.2),
+    0 0.5rem 2rem rgba(51, 51, 51, 0.2);
+  @apply relative bg-white text-inline-code-color pt-12 m-8 rounded-md border-gray-500;
+}
+
+pre.language-terminal::before {
+  content: "\2022 \2022 \2022";
+  background: linear-gradient(180deg, #eaeaea, #d2d2d2);
+  color: #b9bcbd;
+  line-height: 0;
+  padding: 15px 0 16px;
+  text-indent: 6px;
+  letter-spacing: -12px;
+  border-bottom: 1px solid #a6a9aa;
+  @apply absolute top-0 left-0 w-full text-4xl m-0;
+}
+
+pre.language-terminal::after {
+  content: "Output";
+  font-family: Myriad Pro, sans-serif;
+  text-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.5);
+  font-size: 0.9rem;
+  position: absolute;
+  top: 6px;
+  right: 1.5rem;
+}
+
+code.language-terminal {
+  @apply bg-white text-gray-800;
+}
+
+.mode-dark pre.language-terminal {
+  @apply bg-neutral-800;
+}
+
+.mode-dark pre.language-terminal::before {
+  @apply bg-neutral-900;
+}
+
+.mode-dark code.language-terminal {
+  @apply bg-neutral-800 text-neutral-100;
+}

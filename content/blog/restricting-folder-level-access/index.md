@@ -65,7 +65,7 @@ If the command was successfully executed two things would have happened:
 
 My `.gitmodules` file looks like this:
 
-```bash
+```terminal
 [submodule "content"]
 	path = content
 	url = https://github.com/pranavmalvawala/pranavmalvawala.com-content.git
@@ -81,7 +81,7 @@ git status
 
 The result may look something like this
 
-```bash
+```terminal
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -116,7 +116,7 @@ Since we are pulling changes from remote repo, hence the `--remote` flag.
 
 Now if the pull was sucessfully and you run `git status`, you will see something like this:
 
-```bash
+```terminal
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
@@ -151,7 +151,11 @@ The site will be successfully deployed.
 ## Summary
 
 - Submodules allow you to keep a Git repository as a subdirectory of another Git repository.
-- You can add a submodule with this command `git submodule add <SUBMODULE_REPO_PATH>`
+- You can add a submodule with this command
+
+  ```bash
+  git submodule add <SUBMODULE_REPO_PATH>
+  ```
 
 - Never work on a submodule from a parent repo. You should always just pull in changes to update it.
 - You can update submodule in a project with `git submodule update --remote`, where `--remote` flag implies fetch from remote url.

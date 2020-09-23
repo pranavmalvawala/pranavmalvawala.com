@@ -22,7 +22,7 @@ const navvariants = {
 function Navigation({ links, isOpen }) {
   return (
     <div
-      className={`fixed top-0 bottom-16 inset-x-0 ${
+      className={`fixed top-0 bottom-16 inset-x-0 z-10 ${
         isOpen ? "" : "pointer-events-none"
       }`}
     >
