@@ -58,7 +58,7 @@
 }
 
 .markdown h1 {
-  @apply pb-2 mt-0 mb-2 text-4xl font-medium text-center leading-tight border-b-0;
+  @apply pb-2 mt-0 mb-2 text-4xl font-medium text-center leading-tight border-b-0 w-full text-center;
 }
 
 .markdown h2 {
