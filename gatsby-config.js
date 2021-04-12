@@ -48,19 +48,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Red Hat Display`,
-            subsets: [`latin`],
-          },
-          {
-            family: `Red Hat Text`,
-            subsets: [`latin`],
-            variants: [`400`, `400i`, `500`, `700`, `900`],
-          },
-        ],
+        fonts: [ `Red Hat Display`, `Red Hat Text\:400,400i,500,700,900` ],
+        display: `swap`,
       },
     },
     {
