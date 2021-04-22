@@ -1,89 +1,21 @@
-# gatsby-casper
+# pranavmalvawala.com
 
-Demo: https://gatsby-casper.netlify.app
+Pranav's personal website is built using Gatsby.
 
-This is a static blog generator and starter gatsby repo. A port of [Casper](https://github.com/TryGhost/Casper) v3 a theme from [Ghost](https://ghost.org/) for [GatsbyJS](https://www.gatsbyjs.org/) using [TypeScript](https://www.typescriptlang.org/).
+## Note
 
-## Getting Started
+I've made my website open source for your inspiration and curiosity. However, **I highly encourage you to be creative and create your own design, and content.**
 
-Clone this repo.
+However, if you are like me, who just wants to get started as quickly as possible with this design so you don't end up spending more time on designing instead of writing blogs then go ahead, I've create a [gatsby template]() just for this exact purpose.
 
-```
-git clone https://github.com/scttcper/gatsby-casper.git --depth=1
-```
+## Contributing
 
-Remove .git folder and setup a new one
+If you see any typos or formatting errors in a post, or any other issue that needs to be addressed, please do not hesitate to open a pull request and fix it!
 
-```
-rm -rf .git && git init
-```
+## Acknowledgements
 
-Edit website-config.ts with your website settings.
-Either disable subscribe or setup a mailchimp list and add the form action and hidden field input name.
+- Scott Cooper - For his amazing work on [gatsby-casper](https://github.com/scttcper/gatsby-casper). My Site is based off of his template.
 
-Now push to whatever repo you want!
+## License
 
-### Progress
-
-- [x] emotion / component styles
-- [x] home page
-- [x] tag page
-- [x] author page
-- [x] blog page
-  - [x] subscribe form - using [mailchimp](https://mailchimp.com)
-  - [ ] full width images in markdown? - not sure if possible
-  - [x] multiple post authors
-- [x] 404 page
-- [x] subscribe modal/overlay
-- [x] rss feed (on production build)
-- [ ] polish ✨
-  - [x] meta tags
-  - [x] page titles
-  - [ ] pagination
-
-### Deploy to Netlify
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/scttcper/gatsby-casper)
-
-## How to configure Google Analytics
-
-Edit `gatsby-config.js` and add your tracking ID
-
-```javascript
-{
-    resolve: `gatsby-plugin-google-analytics`,
-    options: {
-      // Here goes your tracking ID
-      trackingId: 'UA-XXXX-Y',
-      // Puts tracking script in the head instead of the body
-      head: true,
-      // IP anonymization for GDPR compliance
-      anonymize: true,
-      // Disable analytics for users with `Do Not Track` enabled
-      respectDNT: true,
-      // Avoids sending pageview hits from custom paths
-      exclude: ['/preview/**'],
-      // Specifies what percentage of users should be tracked
-      sampleRate: 100,
-      // Determines how often site speed tracking beacons will be sent
-      siteSpeedSampleRate: 10,
-    },
-},
-```
-
-## How to edit your site title and description
-
-Edit `gatsby-config.js` section `siteMetadata`
-
-```javascript
- siteMetadata: {
-    title: 'My awesome site name',
-    description: 'This is a description for my site',
-    siteUrl: 'https://mysite.com', // full path to blog - no ending slash
-  },
-```
-
-## How to adjust pagination
-
-In `gatsby-node.js`, edit the `postsPerPage` constant. The default value is
-six posts per page.
+This project is open source and available under the [MIT License](LICENSE).
