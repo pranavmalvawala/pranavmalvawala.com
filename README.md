@@ -14,7 +14,7 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 
 ## Acknowledgements
 
-- Scott Cooper - For his amazing work on [gatsby-casper](https://github.com/scttcper/gatsby-casper). My Site is based off of his template.
+- [Scott Cooper](https://github.com/scttcper) - For his amazing work on [gatsby-casper](https://github.com/scttcper/gatsby-casper). My Site is based off of his template.
 
 ## License
 
