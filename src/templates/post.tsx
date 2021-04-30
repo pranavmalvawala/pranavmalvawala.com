@@ -167,8 +167,8 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
             content={`@${config.twitter.split('https://twitter.com/')[1]}`}
           />
         )}
-        {width && <meta property="og:image:width" content={width} />}
-        {height && <meta property="og:image:height" content={height} />}
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
       </Helmet>
       <Wrapper css={PostTemplate}>
         <header className="site-header">
