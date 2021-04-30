@@ -102,12 +102,6 @@ export interface PageContext {
 
 const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
   const post = data.markdownRemark;
-  let width = '';
-  let height = '';
-  if (post.frontmatter.image?.childImageSharp) {
-    width = post.frontmatter.image.childImageSharp.fluid.sizes.split(', ')[1].split('px')[0];
-    height = String(Number(width) / post.frontmatter.image.childImageSharp.fluid.aspectRatio);
-  }
 
   const date = new Date(post.frontmatter.date);
   // 2018-08-20
@@ -127,12 +121,10 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
         <meta property="og:title" content={post.frontmatter.title} />
         <meta property="og:description" content={post.frontmatter.excerpt || post.excerpt} />
         <meta property="og:url" content={config.siteUrl + location.pathname} />
-        {post.frontmatter.image?.childImageSharp && (
-          <meta
-            property="og:image"
-            content={`${config.siteUrl}${post.frontmatter.image.childImageSharp.fluid.src}`}
-          />
-        )}
+        <meta
+          property="og:image"
+          content={`${config.siteUrl}${post.frontmatter.image.childImageSharp.fluid.src}`}
+        />
         <meta property="article:published_time" content={post.frontmatter.date} />
         {/* not sure if modified time possible */}
         {/* <meta property="article:modified_time" content="2018-08-20T15:12:00.000Z" /> */}
@@ -142,33 +134,14 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
 
         {config.facebook && <meta property="article:publisher" content={config.facebook} />}
         {config.facebook && <meta property="article:author" content={config.facebook} />}
+
+        {/* Twitter tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.frontmatter.title} />
         <meta name="twitter:description" content={post.frontmatter.excerpt || post.excerpt} />
-        <meta name="twitter:url" content={config.siteUrl + location.pathname} />
-        {post.frontmatter.image?.childImageSharp && (
-          <meta
-            name="twitter:image"
-            content={`${config.siteUrl}${post.frontmatter.image.childImageSharp.fluid.src}`}
-          />
-        )}
-        <meta name="twitter:label1" content="Written by" />
-        <meta name="twitter:label2" content="Filed under" />
-        {post.frontmatter.tags && <meta name="twitter:data2" content={post.frontmatter.tags[0]} />}
-        {config.twitter && (
-          <meta
-            name="twitter:site"
-            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
-          />
-        )}
-        {config.twitter && (
-          <meta
-            name="twitter:creator"
-            content={`@${config.twitter.split('https://twitter.com/')[1]}`}
-          />
-        )}
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="600" />
+        <meta name="twitter:image" content={`${config.siteUrl}${post.frontmatter.image.childImageSharp.fluid.src}`} />
+        <meta name="twitter:creator" content={`@${config.twitter?.split('https://twitter.com/')[1]}`} />
+
       </Helmet>
       <Wrapper css={PostTemplate}>
         <header className="site-header">
