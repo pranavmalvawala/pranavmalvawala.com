@@ -51,7 +51,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://gatsby-casper.netlify.com',
+        siteUrl: 'https://pranavmalvawala.com',
       },
     },
     'gatsby-plugin-typescript',

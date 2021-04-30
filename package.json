@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-casper",
-  "description": "Casper for gatsby",
+  "name": "pranavmalvawala.com",
+  "description": "Pranav's personal website",
   "version": "0.0.0",
   "private": true,
-  "author": "Scott Cooper <scttcper@gmail.com>",
+  "author": "Pranav Malvawala <hey@pranavmalvawala.com>",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
