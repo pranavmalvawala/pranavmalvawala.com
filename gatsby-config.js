@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: 'Pranav Malvawala',
     description: 'Personal Blog',
-    siteUrl: 'https://pranavmalvawala', // full path to blog - no ending slash
+    siteUrl: 'https://pranavmalvawala.com', // full path to blog - no ending slash
   },
   plugins: [
     'gatsby-plugin-sitemap',
