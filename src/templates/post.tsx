@@ -159,7 +159,7 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
                 <PostFullTags className="post-full-tags">
                   {post.frontmatter.tags.map(tag => (
                     <React.Fragment key={tag}>
-                      <Link to={`/tags/${_.kebabCase(tag)}/`}>
+                      <Link to={`/tags/${_.kebabCase(tag)}`}>
                         {tag}
                       </Link>
                       &emsp;

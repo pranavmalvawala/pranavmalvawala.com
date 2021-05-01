@@ -18,7 +18,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       let slug = permalink;
 
       if (!slug) {
-        slug = `/${relativePath.replace('.md', '')}/`;
+        slug = `/${relativePath.replace('.md', '')}`;
       }
 
       // Used to generate URL to view this content.
@@ -149,8 +149,9 @@ exports.createPages = async ({ graphql, actions }) => {
     ),
   );
   tags.forEach(tag => {
+    console.log('tag', `/tags/${_.kebabCase(tag)}`);
     createPage({
-      path: `/tags/${_.kebabCase(tag)}/`,
+      path: `/tags/${_.kebabCase(tag)}`,
       component: tagTemplate,
       context: {
         tag,
