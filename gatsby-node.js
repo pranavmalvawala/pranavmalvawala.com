@@ -149,7 +149,6 @@ exports.createPages = async ({ graphql, actions }) => {
     ),
   );
   tags.forEach(tag => {
-    console.log('tag', `/tags/${_.kebabCase(tag)}`);
     createPage({
       path: `/tags/${_.kebabCase(tag)}`,
       component: tagTemplate,

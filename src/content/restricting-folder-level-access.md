@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Restricting Folder Level Access in Repo using Git submodules"
+title: 'Restricting Folder Level Access in Repo using Git submodules'
 tags: ['git']
 image: img/restricting-folder-level-access.jpg
+imageCredit: Photo by [Jannik Kiel](https://unsplash.com/@jannikkiel)
 date: '2020-07-22T11:32:26.121Z'
 draft: false
 ---

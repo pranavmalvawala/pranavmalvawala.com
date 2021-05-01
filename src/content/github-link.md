@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Github Source
-image: img/callum-shaw-555357-unsplash.jpg
+title: 'Github Source'
+image: img/github-link.jpg
+imageCredit: 'Photo by [Callum Shaw](https://unsplash.com/@callumshaw)'
 date: 2021-04-13T10:00:00.000Z
 tags: ['source']
 excerpt: Where to find this project on GitHub.

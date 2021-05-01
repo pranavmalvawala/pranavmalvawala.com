@@ -5,6 +5,7 @@ import * as _ from 'lodash';
 import { lighten, setLightness } from 'polished';
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import ReactMarkdown from 'react-markdown';
 
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
@@ -55,6 +56,7 @@ interface PageTemplateProps {
         excerpt: string;
         tags: string[];
         author: Author[];
+        imageCredit: any;
       };
     };
     relatedPosts: {
@@ -193,6 +195,9 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
                     fluid={post.frontmatter.image.childImageSharp.fluid}
                     alt={post.frontmatter.title}
                   />
+                  {post.frontmatter.imageCredit && (
+                    <ReactMarkdown className="image-credit">{post.frontmatter.imageCredit}</ReactMarkdown>
+                  )}
                 </PostFullImage>
               )}
               <PostContent htmlAst={post.htmlAst} />
@@ -221,6 +226,10 @@ const PostTemplate = css`
     margin-top: 64px;
     background: #fff;
     padding-bottom: 4vw;
+
+    .image-credit {
+      text-align: center
+    }
   }
 
   @media (prefers-color-scheme: dark) {
@@ -422,6 +431,7 @@ export const query = graphql`
         date
         tags
         excerpt
+        imageCredit
         image {
           childImageSharp {
             fluid(maxWidth: 3720) {
