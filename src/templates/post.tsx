@@ -6,6 +6,7 @@ import { lighten, setLightness } from 'polished';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import ReactMarkdown from 'react-markdown';
+import {TwitterShareButton, LinkedinShareButton} from 'react-share'
 
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
@@ -44,6 +45,9 @@ interface PageTemplateProps {
       htmlAst: any;
       excerpt: string;
       timeToRead: string;
+      fields: {
+        slug: string;
+      }
       frontmatter: {
         title: string;
         date: string;
@@ -104,7 +108,7 @@ export interface PageContext {
 
 const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
   const post = data.markdownRemark;
-
+  const { fields: { slug } } = data.markdownRemark;
   const date = new Date(post.frontmatter.date);
   // 2018-08-20
   const datetime = format(date, 'yyyy-MM-dd');
@@ -205,6 +209,33 @@ const PageTemplate = ({ data, pageContext, location }: PageTemplateProps) => {
               {/* The big email subscribe modal content */}
               {config.showSubscribe && <Subscribe title={config.title} />}
             </article>
+            <PostAction>
+              <p>
+                <a target="_blank" rel="noopener noreferrer" href={`https://twitter.com/search?q=${config.siteUrl + slug}`}>Discuss on Twitter</a>
+                <span> • </span>
+                <a target="_blank" rel="noopener noreferrer" href={`https://github.com/pranavmalvawala/pranavmalvawala.com/edit/main/src/content${slug}.md`}>Edit post on Github</a>
+              </p>
+            </PostAction>
+            <PostAction>
+              <div>
+                <div className="gray-line" />
+                <span className="share-article">Share article</span>
+                <TwitterShareButton
+                  url={config.siteUrl + slug}
+                  title={post.frontmatter.title}
+                  via={config.twitterHandle?.split('@').join('')}
+                  className="twitter-share"
+                >
+                  Twitter
+                </TwitterShareButton>
+                <LinkedinShareButton
+                  url={config.siteUrl + slug}
+                  title={post.frontmatter.title}
+                >
+                  LinkedIn
+                </LinkedinShareButton>
+              </div>
+            </PostAction>
           </div>
         </main>
 
@@ -411,6 +442,53 @@ const PostFullImage = styled.figure`
   }
 `;
 
+const PostAction = styled.div`
+  padding: 0 170px;
+  font-size: 2rem;
+
+  p {
+    text-align: right
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .gray-line {
+      margin-right: 20px;
+      cursor: pointer;
+      flex-grow: 1;
+      border-top: 1px solid #D3D3D3;
+    }
+  }
+
+  .share-article {
+    margin-right: 20px;
+    font-size: 70%;
+    text-transform: uppercase;
+    line-height: 2.5;
+    opacity: 0.7;
+  }
+
+  .twitter-share {
+    margin-right: 20px;
+  }
+
+  @media (max-width: 1170px) {
+    padding: 0 11vw;
+  }
+
+  @media (max-width: 800px) {
+    padding: 0 5vw;
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 500px) {
+    padding: 0;
+  }
+`;
+
 export const query = graphql`
   query($slug: String, $primaryTag: String) {
     logo: file(relativePath: { eq: "img/ghost-logo.png" }) {
@@ -425,6 +503,9 @@ export const query = graphql`
       htmlAst
       excerpt
       timeToRead
+      fields {
+        slug
+      }
       frontmatter {
         title
         userDate: date(formatString: "D MMMM YYYY")

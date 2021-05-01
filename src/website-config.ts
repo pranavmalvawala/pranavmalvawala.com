@@ -20,6 +20,7 @@ export interface WebsiteConfig {
    * full url, no username
    */
   twitter?: string;
+  twitterHandle?: string;
   /**
    * full url, no username
    */
@@ -68,6 +69,7 @@ const config: WebsiteConfig = {
   lang: 'en',
   siteUrl: 'https://pranavmalvawala.com',
   twitter: 'https://twitter.com/pranavmalvawala',
+  twitterHandle: '@pranavmalvawala',
   linkedIn: 'https://www.linkedin.com/in/pranavmalvawala',
   github: 'https://github.com/pranavmalvawala',
   mail: 'hey@pranavmalvawala.com',

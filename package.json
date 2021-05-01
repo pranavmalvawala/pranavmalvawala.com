@@ -54,6 +54,7 @@
     "react-emotion": "10.0.0",
     "react-helmet": "6.1.0",
     "react-markdown": "^6.0.1",
+    "react-share": "^4.4.0",
     "rehype-react": "6.2.0"
   },
   "devDependencies": {
