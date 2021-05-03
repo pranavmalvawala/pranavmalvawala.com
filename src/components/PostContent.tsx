@@ -425,7 +425,6 @@ export const PostFullContent = styled.section`
     font-weight: 700;
     letter-spacing: 0.2px;
     text-align: left;
-    text-transform: uppercase;
     /* background-color: color(var(--whitegrey) l(+4%)); */
     background-color: ${lighten('0.04', colors.whitegrey)};
   }

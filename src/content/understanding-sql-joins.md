@@ -31,7 +31,7 @@ students table:
 
 Notice that both tables have `studentId` as a common column. Now we have chance to create the type relationship (_JOIN_) we want between 2 tables. The blog post assumes here on out that you know how to query using _WHERE_ clause. 
 
->Be aware that same column name doesn't always mean they are ones to create a JOIN on. In most cases students table would have id as column name for studentId column. To be clear column name has nothing to do with creating relationship. You must know that yeah that studentId from fees table is id/studentId column in students table.
+>Be aware that same column name doesn't always mean they are the ones to create a JOIN on. In most cases, students table would have id as column name for studentId column. Clearly, column name has nothing to do with creating relationship. You must know that yeah that studentId from fees table is id/studentId column in students table.
 
 We're going to create an INNER JOIN (I'll explain what it means below, so keep reading) on `studentId` column and let's say we query for `feeId` _145237_.
 
