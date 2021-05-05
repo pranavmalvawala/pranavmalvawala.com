@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 'Upgrading to Wsl 2'
+title: Upgrading to Wsl 2
 tags: ['wsl', 'windows']
-image: 'img/upgrading-to-wsl2.jpg'
+image: img/upgrading-to-wsl2.jpg
 imageCredit: Photo by [Jake Hills](https://unsplash.com/@jakehills)
-date: '2020-10-18T11:32:26.121Z'
+date: 2020-10-18
 draft: false
 ---
 

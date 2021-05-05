@@ -2,8 +2,8 @@
 layout: post
 title: A Full and Comprehensive Style Test
 image: img/testimg-cover.jpg
-date: 2018-09-30T07:03:47.149Z
-draft: false
+date: 2018-09-30
+draft: true
 tags: ['formatting']
 ---
 
