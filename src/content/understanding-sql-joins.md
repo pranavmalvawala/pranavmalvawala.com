@@ -7,7 +7,7 @@ imageCredit: Photo by [JJ Ying](https://unsplash.com/@jjying)
 date: '2021-05-03T12:06:01.752Z'
 draft: false
 ---
-_JOIN_, one of the key components of SQL, without which collecting data from different tables, in a single query, in a structured format would nearly be impossible. Inshort it eases the life of a developer.
+_JOIN_, one of the key components of SQL, without which collecting data from different tables, in a single query, in a structured format would nearly be impossible.
 
 > A _JOIN_ clause is used to combine rows from two or more tables, based on a related column between them. - w3schools
 
@@ -160,3 +160,42 @@ Now if we substitute appropriate values like we did for LEFT JOIN for _students_
 </center>
 
 ## Full Join
+
+The FULL JOIN (also referred to as FULL OUTER JOIN) returns all the records whether they are matched or not.
+
+![Full Join](img/full-join.png)
+
+The query for full join would look like this,
+
+```sql
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+
+Now if we substitute appropriate values like we did for other queries the result would look something like this,
+
+<center>
+
+| feeId | name | paidDate |
+| :------------: | :------------: | :------------: |
+|   145236   |      |   2021-05-03   |
+|   145237   |      |   2021-05-03   |
+|   145238   |      |   2021-04-30   |
+|   145239   |      |   2021-05-04   |
+|      |   Allison   |      |
+|      |   Dan   |      |
+|      |   Kent   |      |
+
+</center>
+
+> Please note that Mysql doesn't support FULL JOIN but there are ways we can simulate it. Now I can write a whole article on it but I'd rather suggest to read this [blog post](https://www.xaprb.com/blog/2006/05/26/how-to-write-full-outer-join-in-mysql/).  
+
+## Conclusion
+
+JOINS are awesome for collecting data from multiple tables, all at once. They eases your life as a developer and would also make you look super smart with all the JOINs in a single query (I mean, who worries about the next guy touching this code).
+
+We also saw that there 4 basic Joins, INNER JOIN, LEFT JOIN, RIGHT JOIN and FULL JOIN and how to implement them.
+
+Enjoy implementing them!
