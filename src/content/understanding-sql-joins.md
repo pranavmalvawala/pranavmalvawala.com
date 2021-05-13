@@ -71,6 +71,7 @@ There are 4 basic _JOINs_,
 1. LEFT JOIN
 3. RIGHT JOIN
 4. FULL JOIN
+5. CROSS JOIN
 
 ## Inner Join
 
@@ -190,12 +191,48 @@ Now if we substitute appropriate values like we did for other queries the result
 
 </center>
 
-> Please note that Mysql doesn't support FULL JOIN but there are ways we can simulate it. Now I can write a whole article on it but I'd rather suggest to read this [blog post](https://www.xaprb.com/blog/2006/05/26/how-to-write-full-outer-join-in-mysql/).  
+> Please note that Mysql doesn't support FULL JOIN but there are ways we can simulate it. Now I can write a whole article on it but I'd rather suggest to read this [blog post](https://www.xaprb.com/blog/2006/05/26/how-to-write-full-outer-join-in-mysql/).
+
+## Cross Join
+
+The CROSS JOIN returns all the records from both tables. Putting it simply, _cross join_ would result in joining every row of one table to every row of other table. To make sense, let's use it with _students_ and _fees_ table.
+
+The query would look like this,
+
+```sql
+SELECT *
+FROM fees
+CROSS JOIN students
+```
+Running this query would result in following data,
+
+<center>
+
+| feeId | studentId | paidDate | studentId | name |
+| :------------: | :------------: | :------------: | :------------: | :------------: |
+|   145236   |   27   |   2021-05-03   |   9   |  Allison  |
+|   145236   |   27   |   2021-05-03   |   10   |  Dan  |
+|   145236   |   27   |   2021-05-03   |   11   |  Kent  |
+|   145237   |   9   |   2021-05-03   |   9   |  Allison  |
+|   145237   |   9   |   2021-05-03   |   10   |  Dan  |
+|   145237   |   9   |   2021-05-03   |   11   |  Kent  |
+|   145238   |   63   |   2021-04-30   |   9   |  Allison  |
+|   145238   |   63   |   2021-04-30   |   10   |  Dan  |
+|   145238   |   63   |   2021-04-30   |   11   |  Kent  |
+|   145238   |   11   |   2021-05-04   |   9   |  Allison  |
+|   145238   |   11   |   2021-05-04   |   10   |  Dan  |
+|   145238   |   11   |   2021-05-04   |   11   |  Kent  |
+
+</center>
+
+Probably not what you expected, Right?
+
+> CROSS JOIN can potentially return very large result-sets! If you add a WHERE clause with CROSS JOIN, it would return same result as an INNER JOIN query.
 
 ## Conclusion
 
 JOINS are awesome for collecting data from multiple tables, all at once. They eases your life as a developer and would also make you look super smart with all the JOINs in a single query (I mean, who worries about the next guy touching this code).
 
-We saw that there 4 basic Joins, INNER JOIN, LEFT JOIN, RIGHT JOIN and FULL JOIN and how to implement them.
+We saw that there 4 basic Joins, INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN and CROSS JOIN and how to implement them.
 
 Good luck!
