@@ -66,7 +66,7 @@ The query result looks like this,
 
 So, now you've got the basic idea how JOIN works, time to dive deep. I will be using only 2 tables for explaining everything but I'm pretty sure, same concepts are applicable to any number of tables.
 
-There are 4 basic _JOINs_,
+There are 5 basic _JOINs_,
 1. INNER JOIN
 1. LEFT JOIN
 3. RIGHT JOIN
@@ -233,6 +233,6 @@ Probably not what you expected, Right?
 
 JOINS are awesome for collecting data from multiple tables, all at once. They eases your life as a developer and would also make you look super smart with all the JOINs in a single query (I mean, who worries about the next guy touching this code).
 
-We saw that there 4 basic Joins, INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN and CROSS JOIN and how to implement them.
+We saw that there 5 basic Joins, INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN and CROSS JOIN and how to implement them.
 
 Good luck!
