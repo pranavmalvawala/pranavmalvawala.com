@@ -66,22 +66,50 @@ const About: React.FC = () => (
                   for me is and became a developer. I like documenting my journey and I hope you enjoy
                   the site.
                 </p>
+
                 <h3>How I currently spend most of my time</h3>
                 <ul>
                   <li>
                     Working on <a href="https://livecs.org/" target="_blank" rel="noopener noreferrer">livecs.org</a>.
                   </li>
                   <li>
-                    Transitioning from a software developer to software engineer. Following this amazing repo
-                    - <a href="https://github.com/jwasham/coding-interview-university">jwasham/coding-interview-university</a>.
+                    Understanding and using all types (mostly web) of AWS services.
                   </li>
                   <li>
                     Understanding Docker & Kubernetes. <a href="https://www.udemy.com/course/docker-mastery/">Course link</a>.
                   </li>
-                  <li>Reading - <a href="https://www.navalmanack.com/">The Almanack Of Naval Ravikant</a>.</li>
-                  <li>Come up with blog ideas.</li>
+                  <li>Following React Storybook <a href="https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/">tutorial</a></li>
                 </ul>
                 <p>You can contact on any social apps or email at <a href="mailto:hey@pranavmalvawala.com">hey@pranavmalvawala.com</a> to say hi!</p>
+
+                <h3>Books</h3>
+                <p>
+                  Not long ago, I started reading books for my own understandings. I started with self-help
+                  but I'm moving towards programming and finance.
+                </p>
+                <p>Reach out to me if you've got any suggestions.</p>
+                <h3>Currently reading</h3>
+                <ul>
+                  <li>
+                    <a href="https://www.unshakeable.com/">Unshakeable</a>: Your Financial Freedom Playbook
+                  </li>
+                  <li>
+                    <a href="https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/README.md">Scopes and closures</a> - You Don't Know JS Yet
+                  </li>
+                </ul>
+                <h3>Have read</h3>
+                <li>
+                  <a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/up%20&%20going/README.md#you-dont-know-js-up--going">Up & Going</a> - You Don't know JS yet
+                </li>
+                <li>
+                  <a href="https://www.navalmanack.com/">The Almanack of Naval Ravikant</a>
+                </li>
+                <li>
+                  <a href="https://www.thesecret.tv/products/the-secret-book/">The Secret</a>
+                </li>
+                <li>
+                  <a href="https://www.amazon.in/Power-your-Subconscious-Mind/dp/8192910962">The Power of your Subconscious Mind</a>
+                </li>
               </div>
             </PostFullContent>
           </article>
