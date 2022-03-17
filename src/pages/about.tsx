@@ -70,7 +70,7 @@ const About: React.FC = () => (
                 <h3>How I currently spend most of my time</h3>
                 <ul>
                   <li>
-                    Working on <a href="https://livecs.org/" target="_blank" rel="noopener noreferrer">livecs.org</a>.
+                    Working on <a href="https://tweethunter.io" target='_blank' rel="noopener noreferrer">TweetHunter</a> and <a href="https://livecs.org/" target="_blank" rel="noopener noreferrer">livecs.org</a>.
                   </li>
                   <li>
                     Understanding and using all types (mostly web) of AWS services.

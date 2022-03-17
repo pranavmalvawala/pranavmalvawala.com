@@ -63,7 +63,7 @@ export interface WebsiteConfig {
 
 const config: WebsiteConfig = {
   title: 'Pranav Malvawala',
-  description: 'I\'m Pranav Malvawala, and I build things for the web.',
+  description: 'I\'m Pranav Malvawala, and I help startups and companies in creating quality software.',
   coverImage: '',
   logo: '',
   lang: 'en',
