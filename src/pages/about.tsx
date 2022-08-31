@@ -81,35 +81,6 @@ const About: React.FC = () => (
                   <li>Following React Storybook <a href="https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/">tutorial</a></li>
                 </ul>
                 <p>You can contact on any social apps or email at <a href="mailto:hey@pranavmalvawala.com">hey@pranavmalvawala.com</a> to say hi!</p>
-
-                <h3>Books</h3>
-                <p>
-                  Not long ago, I started reading books for my own understandings. I started with self-help
-                  but I'm moving towards programming and finance.
-                </p>
-                <p>Reach out to me if you've got any suggestions.</p>
-                <h3>Currently reading</h3>
-                <ul>
-                  <li>
-                    <a href="https://www.unshakeable.com/">Unshakeable</a>: Your Financial Freedom Playbook
-                  </li>
-                  <li>
-                    <a href="https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/README.md">Scopes and closures</a> - You Don't Know JS Yet
-                  </li>
-                </ul>
-                <h3>Have read</h3>
-                <li>
-                  <a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/up%20&%20going/README.md#you-dont-know-js-up--going">Up & Going</a> - You Don't know JS yet
-                </li>
-                <li>
-                  <a href="https://www.navalmanack.com/">The Almanack of Naval Ravikant</a>
-                </li>
-                <li>
-                  <a href="https://www.thesecret.tv/products/the-secret-book/">The Secret</a>
-                </li>
-                <li>
-                  <a href="https://www.amazon.in/Power-your-Subconscious-Mind/dp/8192910962">The Power of your Subconscious Mind</a>
-                </li>
               </div>
             </PostFullContent>
           </article>
