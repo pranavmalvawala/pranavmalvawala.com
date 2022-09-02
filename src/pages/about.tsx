@@ -57,30 +57,54 @@ const About: React.FC = () => (
             <PostFullContent className="post-full-content">
               <div className="post-content">
                 <p>
-                  Hi there! My name is Pranav and I'm a Software Developer, building web-apps (sites).
-                  Currently I'm self-employed, working as a full-time freelancer.
+                  Hi there! My name is Pranav and I'm a Software Developer, building web-apps
+                  (sites). Currently I'm self-employed, working as a full-time freelancer.
                 </p>
                 <p>
-                  I'm always learning or building something. I have a degree in electrical engineering
-                  and spent few months with jobs in that sector before I realized what the right career
-                  for me is and became a developer. I like documenting my journey and I hope you enjoy
-                  the site.
+                  I'm always learning or building something. I have a degree in electrical
+                  engineering and spent few months with jobs in that sector before I realized what
+                  the right career for me is and became a developer. I like documenting my journey
+                  so I{' '}
+                  <a
+                    href="https://twitter.com/pranavmalvawala"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    tweet
+                  </a>{' '}
+                  stuff.
                 </p>
 
                 <h3>How I currently spend most of my time</h3>
                 <ul>
                   <li>
-                    Working on <a href="https://tweethunter.io" target='_blank' rel="noopener noreferrer">TweetHunter</a> and <a href="https://livecs.org/" target="_blank" rel="noopener noreferrer">livecs.org</a>.
+                    Working on{' '}
+                    <a href="https://tweethunter.io" target="_blank" rel="noopener noreferrer">
+                      TweetHunter
+                    </a>
+                    ,{' '}
+                    <a href="https://www.taplio.com" target="_blank" rel="noopener noreferrer">
+                      Taplio
+                    </a>{' '}
+                    and{' '}
+                    <a href="https://livecs.org/" target="_blank" rel="noopener noreferrer">
+                      livecs.org
+                    </a>
+                    .
                   </li>
+                  <li>Gym almost regularly.</li>
                   <li>
-                    Understanding and using all types (mostly web) of AWS services.
+                    Figuring out how to get started with building{' '}
+                    <a href="http://devsubs.com" target="_blank" rel="noopener noreferrer">
+                      devsubs
+                    </a>{' '}
+                    (a web development agency).
                   </li>
-                  <li>
-                    Understanding Docker & Kubernetes. <a href="https://www.udemy.com/course/docker-mastery/">Course link</a>.
-                  </li>
-                  <li>Following React Storybook <a href="https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/">tutorial</a></li>
                 </ul>
-                <p>You can contact on any social apps or email at <a href="mailto:hey@pranavmalvawala.com">hey@pranavmalvawala.com</a> to say hi!</p>
+                <p>
+                  You can contact on any social apps or email at{' '}
+                  <a href="mailto:hey@pranavmalvawala.com">hey@pranavmalvawala.com</a> to say hi!
+                </p>
               </div>
             </PostFullContent>
           </article>
