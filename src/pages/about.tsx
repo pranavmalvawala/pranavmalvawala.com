@@ -74,33 +74,21 @@ const About: React.FC = () => (
                   </a>{' '}
                   stuff.
                 </p>
+                <h3>
+                  currently I spend most of my time building{' '}
+                  <a href="https://tweethunter.io" target="_blank" rel="noopener noreferrer">
+                    TweetHunter
+                  </a>
+                  ,{' '}
+                  <a href="https://www.taplio.com" target="_blank" rel="noopener noreferrer">
+                    Taplio
+                  </a>{' '}
+                  and{' '}
+                  <a href="https://livecs.org/" target="_blank" rel="noopener noreferrer">
+                    livecs.org
+                  </a>
+                </h3>
 
-                <h3>How I currently spend most of my time</h3>
-                <ul>
-                  <li>
-                    Working on{' '}
-                    <a href="https://tweethunter.io" target="_blank" rel="noopener noreferrer">
-                      TweetHunter
-                    </a>
-                    ,{' '}
-                    <a href="https://www.taplio.com" target="_blank" rel="noopener noreferrer">
-                      Taplio
-                    </a>{' '}
-                    and{' '}
-                    <a href="https://livecs.org/" target="_blank" rel="noopener noreferrer">
-                      livecs.org
-                    </a>
-                    .
-                  </li>
-                  <li>Gym almost regularly.</li>
-                  <li>
-                    Figuring out how to get started with building{' '}
-                    <a href="http://devsubs.com" target="_blank" rel="noopener noreferrer">
-                      devsubs
-                    </a>{' '}
-                    (a web development agency).
-                  </li>
-                </ul>
                 <p>
                   You can contact on any social apps or email at{' '}
                   <a href="mailto:hey@pranavmalvawala.com">hey@pranavmalvawala.com</a> to say hi!
