@@ -57,8 +57,8 @@ const About: React.FC = () => (
             <PostFullContent className="post-full-content">
               <div className="post-content">
                 <p>
-                  Hi there! My name is Pranav and I'm a Software Developer, building web-apps
-                  (sites). Currently I'm self-employed, working as a full-time freelancer.
+                  Hi there! I'm Pranav and I work as a Software Developer. I build web-apps
+                  (sites), mobile apps and recently started working on extensions as well. Currently I'm self-employed, working as a full-time freelancer.
                 </p>
                 <p>
                   I'm always learning or building something. I have a degree in electrical
@@ -75,22 +75,25 @@ const About: React.FC = () => (
                   stuff.
                 </p>
                 <h3>
-                  currently I spend most of my time building{' '}
+                  Currently I spend most of my time building{' '}
                   <a href="https://tweethunter.io" target="_blank" rel="noopener noreferrer">
                     TweetHunter
                   </a>
                   ,{' '}
                   <a href="https://www.taplio.com" target="_blank" rel="noopener noreferrer">
                     Taplio
+                  </a>,{' '}
+                  <a href="https://www.tweethunter.io/twemex" target="_blank" rel="noopener noreferrer">
+                    Twemex
                   </a>{' '}
                   and{' '}
                   <a href="https://livecs.org/" target="_blank" rel="noopener noreferrer">
                     livecs.org
                   </a>
                 </h3>
-
+                <br />
                 <p>
-                  You can contact on any social apps or email at{' '}
+                  You can contact on any social apps (@pranavmalvawala) or email at{' '}
                   <a href="mailto:hey@pranavmalvawala.com">hey@pranavmalvawala.com</a> to say hi!
                 </p>
               </div>
